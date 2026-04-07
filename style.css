@@ -1,31 +1,58 @@
-.text-purple {
-    color: #6f42c1;
-}
-
-.bg-purple {
-    background-color: #6f42c1;
-}
-
-.bg-gradient {
-    background: linear-gradient(135deg, #6f42c1 0%, #a78bfa 100%);
-}
-
-.btn-purple {
-    background-color: #6f42c1;
-    color: white;
-    transition: all 0.3s ease;
-}
-
-.btn-purple:hover {
-    background-color: #5a32a3;
-    color: white;
-    transform: translateY(-2px);
+/* Este archivo simula la compilación de custom.scss con las variables sobreescritas */
+:root {
+    --bs-purple: #b980ff;
+    --bs-primary: #6f42c1;
+    --bs-body-bg: #f5f0ff;
+    --bs-body-color: #2d2d2d;
+    --bs-font-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 body {
-    background-color: #e5e5f7;
-    background-image: radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #e5e5f7 20%, #e5e5f7 80%, transparent 80%, transparent), linear-gradient(#444cf7 2px, transparent 2px), linear-gradient(90deg, #444cf7 2px, #e5e5f7 2px);
-    background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
-    background-position: 0 0, 25px 25px, 0 0, 0 0;
-    min-height: 100vh;
+    background-color: #f5f0ff;
+    font-family: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.125rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+.btn-primary:hover {
+    background-color: #5932a3;
+    border-color: #5932a3;
+}
+
+.btn-purple {
+    background-color: #b980ff;
+    border-color: #b980ff;
+    color: white;
+}
+.btn-purple:hover {
+    background-color: #a15ce6;
+    border-color: #a15ce6;
+    color: white;
+}
+
+.btn-outline-purple {
+    border-color: #b980ff;
+    color: #b980ff;
+}
+.btn-outline-purple:hover {
+    background-color: #b980ff;
+    color: white;
+}
+
+.alert-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+    color: white;
+}
+
+.rounded-pill {
+    border-radius: 50rem !important;
 }

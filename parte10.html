@@ -3,103 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disertación Bootstrap | Parte 10</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <title>Sass | Variables y Personalización en Bootstrap</title>
+    <!-- Bootstrap CSS (versión compilada estándar) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tu archivo CSS personalizado (simula la compilación Sass con variables sobreescritas) -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos adicionales para la demo - NO son parte de Sass, solo para UI */
+        body {
+            background: #f8f9fa;
+        }
+        .card-preview {
+            transition: all 0.2s ease;
+        }
+        .variable-badge {
+            font-family: 'Courier New', monospace;
+            background: #2d2d2d;
+            color: #f8f9fa;
+            padding: 0.2rem 0.5rem;
+            border-radius: 0.375rem;
+            font-size: 0.8rem;
+        }
+        .tipografia-ejemplo h1, .tipografia-ejemplo h2, .tipografia-ejemplo h3 {
+            margin-bottom: 0.5rem;
+        }
+        .custom-spacing-box {
+            background: var(--bs-primary);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            overflow-x: auto;
+        }
+        code {
+            color: #9cdcfe;
+        }
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-purple bg-opacity-90 sticky-top">
+    <!-- Navbar similar al ejemplo original pero con colores basados en personalización Sass -->
+    <nav class="navbar navbar-expand-lg sticky-top" style="background-color: var(--bs-purple);">
         <div class="container">
+            <a class="navbar-brand text-white fw-bold" href="#">🎨 Sass: Variables & Personalización</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menuNavegacion">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="parte1.html">Parte 1</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte2.html">Parte 2</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte3.html">Parte 3</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte4.html">Parte 4</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte5.html">Parte 5</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte6.html">Parte 6</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte7.html">Parte 7</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte8.html">Parte 8</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte9.html">Parte 9</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte10.html">Parte 10</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link text-white" href="#variables">Variables</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#colores">Colores</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#tipografia">Tipografía</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#espaciados">Espaciados</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-     <div class="container my-5">
+    <div class="container my-5">
+        <!-- Tarjeta principal igual al estilo del ejemplo -->
         <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
-            <div class="bg-purple text-white px-4 py-3">
-                <h2 class="h4 mb-0">Introducción a Bootstrap</h2>
+            <div class="px-4 py-3 text-white" style="background-color: var(--bs-purple);">
+                <h2 class="h4 mb-0">📌 Sass en Bootstrap: Variables y personalización básica</h2>
             </div>
             
-            <div class="p-4 bg-light border-bottom">
-                <h2 class="h4 text-purple mb-0">Introducción a Bootstrap</h2>
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="p-4" style="background-color: var(--bs-gray-100); border-bottom: 1px solid var(--bs-gray-300);">
+                <h2 class="h4 mb-2" style="color: var(--bs-purple);">¿Qué es Sass y por qué usarlo con Bootstrap?</h2>
+                <p class="mb-0">Sass (Syntactically Awesome Stylesheets) es un preprocesador CSS que permite usar variables, anidación, mixins y funciones. Bootstrap 5 está construido con Sass, lo que facilita la personalización de temas, colores, tipografías y espaciados sin tener que modificar archivos fuente directamente. <strong>Sobreescribiendo variables de Sass</strong> podemos cambiar la apariencia global de Bootstrap de forma limpia y mantenible.</p>
             </div>
 
             <div class="row g-0">
-
+                <!-- Columna izquierda: ejemplos prácticos INTERACTIVOS con personalización Sass -->
                 <div class="col-md-6 p-4 border-end" id="ejemplos-container">
-                    <h5 class="fw-bold text-purple mb-3">Ejemplos prácticos</h5>
-                    <form>
+                    <h5 class="fw-bold mb-3" style="color: var(--bs-purple);">✨ Ejemplos de personalización con Sass</h5>
+                    
+                    <!-- 1. Variables de color -->
+                    <div class="mb-4" id="colores">
+                        <h6 class="fw-semibold">🎨 1. Sobreescritura de colores primarios</h6>
+                        <p class="small text-muted">Variables como <code>$primary</code>, <code>$purple</code> se redefinen antes de importar Bootstrap.</p>
+                        <div class="d-flex gap-2 flex-wrap mt-2">
+                            <button class="btn" style="background-color: var(--bs-primary); color: white;">Primary (custom)</button>
+                            <button class="btn" style="background-color: var(--bs-purple); color: white;">Purple (custom)</button>
+                            <button class="btn btn-outline-success">Success (Bootstrap)</button>
+                            <div class="alert alert-primary mt-2 w-100 py-2" role="alert">
+                                ✅ Este alerta usa el <strong>color primario personalizado</strong> vía Sass.
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="variable-badge">$primary: #6f42c1;</span> 
+                            <span class="variable-badge ms-2">$purple: #b980ff;</span>
+                            <span class="variable-badge ms-2">$body-bg: #f5f0ff;</span>
+                        </div>
+                    </div>
+
+                    <!-- 2. Tipografía personalizada -->
+                    <div class="mb-4" id="tipografia">
+                        <h6 class="fw-semibold">🔤 2. Tipografía (Font family y tamaños)</h6>
+                        <p class="small text-muted">Variables: <code>$font-family-sans-serif</code>, <code>$font-size-base</code>, <code>$headings-font-weight</code></p>
+                        <div class="tipografia-ejemplo p-3 rounded" style="background: white; border-left: 4px solid var(--bs-purple);">
+                            <h1>h1. Título principal</h1>
+                            <h2>h2. Subtítulo impactante</h2>
+                            <h3>h3. Sección destacada</h3>
+                            <p class="lead">Este párrafo usa <code>lead</code> y tiene un tamaño base de 1.125rem (personalizado). La familia tipográfica es <strong>'Poppins', system-ui, sans-serif</strong>.</p>
+                            <p>Texto normal con <strong>peso de fuente headings: 600</strong> y <em>énfasis</em>. Los espaciados también se ajustan con variables como <code>$headings-margin-bottom</code>.</p>
+                        </div>
+                        <div class="mt-2">
+                            <span class="variable-badge">$font-family-sans-serif: 'Poppins', system-ui;</span>
+                            <span class="variable-badge">$font-size-base: 1.125rem;</span>
+                            <span class="variable-badge">$headings-font-weight: 600;</span>
+                        </div>
+                    </div>
+
+                    <!-- 3. Espaciados personalizados -->
+                    <div class="mb-4" id="espaciados">
+                        <h6 class="fw-semibold">📏 3. Espaciados (Margin y Padding personalizados)</h6>
+                        <p class="small text-muted">Sass permite modificar <code>$spacer</code> y sus multiplicadores (<code>$spacers</code> map).</p>
+                        <div class="d-flex flex-column gap-2">
+                            <div class="custom-spacing-box" style="background-color: var(--bs-purple); margin-bottom: 1.5rem;"> 
+                                margin-bottom: 1.5rem (customizado)
+                            </div>
+                            <div class="d-flex gap-4">
+                                <div class="p-3 bg-primary bg-opacity-10 rounded" style="padding: 2rem !important;"> 
+                                    padding: 2rem (variable $spacer * 2)
+                                </div>
+                                <div class="p-2 bg-secondary bg-opacity-10 rounded" style="padding: 1rem;">
+                                    padding base $spacer: 1rem
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <span class="variable-badge">$spacer: 1rem;</span>
+                            <span class="variable-badge">$spacers: ( 0:0, 1:0.5rem, 2:1rem, 3:1.5rem, 4:2rem, 5:3rem );</span>
+                        </div>
+                    </div>
+
+                    <!-- 4. Botones con personalización extra -->
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <div class="text-center mt-3">
-                        <img id="captura-ejemplo" src="Capturas/Captura ejemplo.png" alt="Captura del código" class="img-fluid rounded border" style="border-color: #6f42c1 !important; max-width: 100%;">
-                        <p class="small text-muted mt-2"> </p>
+                        <h6 class="fw-semibold">⚙️ 4. Componentes personalizados (Botones)</h6>
+                        <p class="small text-muted">Modificando <code>$btn-border-radius</code>, <code>$btn-padding-y</code> y colores.</p>
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button class="btn btn-primary rounded-pill px-4">Botón Pill</button>
+                            <button class="btn btn-outline-purple" style="border-color: var(--bs-purple); color: var(--bs-purple);">Outline Purple</button>
+                            <button class="btn btn-purple">Botón Purple sólido</button>
+                        </div>
+                        <div class="mt-2 small text-muted">
+                            📌 <code>$btn-border-radius: 50rem;</code> | <code>$btn-padding-y: 0.5rem;</code>
+                        </div>
                     </div>
                 </div>
                 
+                <!-- Columna derecha: Código Sass + explicación técnica y archivo de sobreescritura -->
                 <div class="col-md-6 p-4">
-                    <h5 class="fw-bold text-purple mb-3">Código</h5>
-                    <textarea id="codigo-editable" rows="12" class="form-control font-monospace"
-                    style="background-color: #2d2d2d; color: #d4d4d4; border: none; font-size: 0.8rem; resize: vertical;">
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-                    </textarea>
+                    <h5 class="fw-bold mb-3" style="color: var(--bs-purple);">📄 Código Sass: custom.scss</h5>
+                    <p class="small text-muted">Así se sobreescriben variables <strong>antes</strong> de importar Bootstrap:</p>
+                    
+                    <textarea id="codigo-sass" rows="18" class="form-control font-monospace"
+                    style="background-color: #2d2d2d; color: #d4d4d4; border: none; font-size: 0.75rem; resize: vertical; font-family: monospace;">
+// custom.scss - Sobreescritura de variables de Bootstrap 5
 
-                    <div class="mt-3" style="overflow-x: auto; overflow-y: visible;">
-                        <img src="Capturas/Captura de pantalla.png" alt="Captura del código" class="rounded" style="height: auto; max-width: none; width: auto;">
+// 1. Personalización de colores
+$purple: #b980ff;
+$primary: #6f42c1;       // Cambia el color primario global
+$body-bg: #f5f0ff;       // Fondo de página claro con tono púrpura
+$body-color: #2d2d2d;
+
+// 2. Tipografía
+$font-family-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$font-size-base: 1.125rem;   // 18px en lugar de 16px
+$headings-font-weight: 600;   // headings más bold
+$headings-margin-bottom: 1rem;
+
+// 3. Espaciados (mapa de espaciadores)
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.5,   // 0.5rem
+  2: $spacer,         // 1rem
+  3: $spacer * 1.5,   // 1.5rem
+  4: $spacer * 2,     // 2rem
+  5: $spacer * 3      // 3rem
+);
+
+// 4. Bordes y botones personalizados
+$btn-border-radius: 50rem;   // Botones pill
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 1rem;
+
+// 5. (Opcional) Agregar un color nuevo a la paleta
+$custom-colors: (
+  "purple": $purple
+);
+
+// 6. Importar Bootstrap completo (después de sobreescribir variables)
+@import "../bootstrap/scss/bootstrap";
+
+// 7. También podemos agregar estilos extra usando las nuevas variables
+body {
+  background-color: $body-bg;
+}
+
+.btn-outline-purple {
+  @include button-outline-variant($purple);
+}
+</textarea>
+                    
+                    <div class="mt-3 alert alert-info" role="alert">
+                        💡 <strong>¿Cómo compilar?</strong> Con <code>npm run build</code> o usando Dart Sass: <code>sass custom.scss custom.css</code>. El CSS resultante integra todos los cambios.
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h6 class="fw-semibold">🔍 Explicación visual: Mapa de variables en Bootstrap</h6>
+                        <div class="bg-white p-3 rounded border">
+                            <ul class="list-unstyled mb-0 small">
+                                <li>✔️ <strong>Variables predeterminadas:</strong> <code>_variables.scss</code> → 900+ opciones.</li>
+                                <li>✔️ <strong>Sobreescritura:</strong> Declarar tus variables <strong>antes</strong> del <code>@import "bootstrap"</code>.</li>
+                                <li>✔️ <strong>Personalización avanzada:</strong> Modificar maps como <code>$theme-colors</code>, <code>$grid-breakpoints</code>.</li>
+                                <li>✔️ <strong>Ventajas:</strong> Código mantenible, sin modificar archivos de Bootstrap, fácil actualización.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Imagen referencial (opcional) igual que en ejemplo pero con temática Sass -->
+                    <div class="mt-4 text-center">
+                        <img src="Capturas/Cap_Sass.png" alt="Diagrama de flujo de compilación Sass" class="img-fluid rounded border" style="border-color: var(--bs-purple) !important; max-width: 100%;">
+                        <p class="small text-muted mt-2">Flujo: variables.scss → custom.scss → bootstrap → estilos finales</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Sección extra interactiva: Override en tiempo real para demostrar concepto (solo visual) -->
+        <div class="card shadow-sm border-0 rounded-4 mt-4 overflow-hidden">
+            <div class="bg-dark text-white px-4 py-2">
+                <h5 class="mb-0">🧪 Demostración: Cambia variables sobre la marcha (simulación)</h5>
+            </div>
+            <div class="p-4">
+                <p class="small">Esto no es Sass real, pero muestra cómo cambiar una variable como <code>$primary</code> afecta a componentes. En un entorno real, recompilarías Sass.</p>
+                <div class="row align-items-center">
+                    <div class="col-auto">
+                        <label class="form-label">Cambiar color primario (simula $primary):</label>
+                        <input type="color" id="colorPicker" value="#6f42c1" class="form-control form-control-color w-100">
+                    </div>
+                    <div class="col">
+                        <button class="btn" id="demoPrimaryBtn" style="background-color: #6f42c1; color: white;">Botón Primary</button>
+                        <div class="alert alert-primary mt-2" id="demoAlert" role="alert">Alert con color primario dinámico</div>
+                    </div>
+                </div>
+                <p class="small text-muted mt-2">*Este es un ejemplo visual. En la práctica, sobreescribes <code>$primary</code> en Sass y recompilas.</p>
+            </div>
+        </div>
     </div>
 
+    <!-- Bootstrap JS (necesario para algunos componentes interactivos) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script para la demo interactiva de color -->
+    <script>
+        // Solo para simular cambio de variable primaria en elementos de ejemplo (no es Sass real, pero didáctico)
+        const colorPicker = document.getElementById('colorPicker');
+        const demoBtn = document.getElementById('demoPrimaryBtn');
+        const demoAlert = document.getElementById('demoAlert');
+        
+        if (colorPicker) {
+            colorPicker.addEventListener('input', (e) => {
+                const newColor = e.target.value;
+                demoBtn.style.backgroundColor = newColor;
+                demoAlert.style.backgroundColor = newColor;
+                demoAlert.style.borderColor = newColor;
+                demoAlert.style.color = '#fff';
+                // También cambiar el estilo de los otros elementos de ejemplo (variables de color en la izquierda)
+                document.querySelectorAll('.btn-primary').forEach(btn => {
+                    if (btn !== demoBtn && btn.classList.contains('btn-primary')) {
+                        btn.style.backgroundColor = newColor;
+                        btn.style.borderColor = newColor;
+                    }
+                });
+                document.querySelectorAll('.alert-primary').forEach(alert => {
+                    if (alert !== demoAlert) {
+                        alert.style.backgroundColor = newColor;
+                        alert.style.borderColor = newColor;
+                        alert.style.color = '#fff';
+                    }
+                });
+                // Cambiar también la variable CSS global para mostrar efecto en algunos elementos
+                document.documentElement.style.setProperty('--bs-primary', newColor);
+                document.documentElement.style.setProperty('--bs-purple', newColor);
+            });
+        }
+    </script>
 </body>
 </html>
