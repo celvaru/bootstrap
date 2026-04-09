@@ -7,10 +7,65 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background: #01003f;
+}
+
+.input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-group label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #0ef;
+    padding: 0 5px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-group input {
+    width: 360px;
+    height: 60px;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 15px;
+    background: transparent;
+    border: 1.2px solid #0ef;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: 0;
+    font-size: 14px;
+    background: #01003f;
+}
+    </style>
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg barra bg-opacity-90 sticky-top">
+    <nav class="navbar navbar-expand-lg bg-opacity-90 sticky-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
                 <span class="navbar-toggler-icon"></span>
@@ -34,73 +89,406 @@
         </div>
     </nav>
 
-     <div class="container my-5">
-        <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
-            <div class="bg-purple text-white px-4 py-3">
-                <h2 class="h4 mb-0">Introducción a Bootstrap</h2>
-            </div>
-            
-            <div class="p-4 bg-light border-bottom">
-                <h2 class="h4 text-purple mb-0">Introducción a Bootstrap</h2>
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-
-            <div class="row g-0">
-
-                <div class="col-md-6 p-4 border-end" id="ejemplos-container">
-                    <h5 class="fw-bold text-purple mb-3">Ejemplos prácticos</h5>
-                    <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <div class="text-center mt-3">
-                        <img id="captura-ejemplo" src="Capturas/Captura ejemplo.png" alt="Captura del código" class="img-fluid rounded border" style="border-color: #6f42c1 !important; max-width: 100%;">
-                        <p class="small text-muted mt-2"> </p>
-                    </div>
+    <section>
+        <div class="container my-5">
+            <div class="card shadow border-0 rounded-4 overflow-hidden">
+    
+                <!-- HEADER -->
+                <div class="bg-primary text-white px-4 py-3">
+                    <h2 class="h4 mb-0">Labels </h2>
                 </div>
-                
-                <div class="col-md-6 p-4">
-                    <h5 class="fw-bold text-purple mb-3">Código</h5>
-                    <textarea id="codigo-editable" rows="12" class="form-control font-monospace"
-                    style="background-color: #2d2d2d; color: #d4d4d4; border: none; font-size: 0.8rem; resize: vertical;">
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-                    </textarea>
-
-                    <div class="mt-3" style="overflow-x: auto; overflow-y: visible;">
-                        <img src="Capturas/Captura de pantalla.png" alt="Captura del código" class="rounded" style="height: auto; max-width: none; width: auto;">
-                    </div>
+    
+                <!-- DESCRIPCIÓN -->
+                <div class="p-4 bg-light border-bottom">
+                    <h4 class="text-purple mb-3">¿Qué son los labels?</h4>
+    
+                    <p>
+                        En Bootstrap, los "labels" pueden referirse a dos conceptos:
+                    </p>
+    
+                    <p>
+                        <strong>Floating Labels:</strong> Permiten que el texto del input se mueva hacia arriba al
+                        interactuar con el campo, mejorando la estética y el uso del espacio.
+                    </p>
+    
+                    <p>
+                        <strong>Badges:</strong> Son pequeñas etiquetas visuales que muestran información adicional como
+                        estados o notificaciones (ej: "Nuevo", "Activo").
+                    </p>
                 </div>
+    
+                <!-- CONTENIDO -->
+                <div class="row g-4 p-4">
+    
+                    <!-- IZQUIERDA -->
+                    <div class="col-md-6">
+                        <h5 class="fw-bold text-purple mb-3">Ejemplo práctico</h5>
+    
+                        <p class="mb-2">Floating Label</p>
+    
+                        <img src="https://codehalweb.com/wp-content/uploads/2024/03/floating-label-1024x576.jpg"
+                            class="img-fluid rounded shadow-sm" alt="Floating Label">
+                    </div>
+    
+                    <!-- DERECHA -->
+                    <div class="col-md-6">
+                        <h5 class="fw-bold text-purple mb-3">Código</h5>
+                        <textarea rows="18" class="form-control font-monospace h-70"
+                        style="background-color: #2d2d2d; color: #ffffff; border-radius: 10px;">
+
+
+    &lt;body&gt; 
+        &lt;div class="input-group"&gt;
+            &lt;input type="text" required&gt;
+            &lt;label&gt;Username&lt;/label&gt;
+        &lt;/div&gt;
+    
+        &lt;div class="input-group"&gt;
+            &lt;input type="password" required&gt;
+            &lt;label&gt;Password&lt;/label&gt;
+        &lt;/div&gt;  
+    &lt;/body&gt;
+              </textarea>
+                    </div>
+
+                <!-- NUEVO EJEMPLO -->
+<div class="row g-4 p-4 border-top">
+
+  <!-- IZQUIERDA -->
+  <div class="col-md-6">
+    <h5 class="fw-bold text-purple mb-3">Ejemplo práctico 2</h5>
+
+    <p>Badges</p>
+
+    <button class="btn btn-primary">
+      Notificaciones <span class="badge bg-light text-dark">4</span>
+    </button>
+
+    <br><br>
+
+    <span class="badge bg-success">Activo</span>
+    <span class="badge bg-danger">Inactivo</span>
+  </div>
+
+  <!-- DERECHA -->
+  <div class="col-md-6">
+    <h5 class="fw-bold text-purple mb-3">Código</h5>
+
+    <textarea rows="10" class="form-control font-monospace h-100"
+      style="background:#2d2d2d; color:white; ">
+
+&lt;button class="btn btn-primary"&gt;
+  Notificaciones &lt;span class="badge bg-light text-dark"&gt;4&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;span class="badge bg-success"&gt;Activo&lt;/span&gt;
+&lt;span class="badge bg-danger"&gt;Inactivo&lt;/span&gt;
+
+    </textarea>
+  </div>
+
+</div>
+                </div>
+    
             </div>
         </div>
-    </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<section> 
+    <div class="container my-5">
+        <div class="card shadow border-0 rounded-4 overflow-hidden">
+
+            <!-- HEADER -->
+            <div class="bg-primary text-white px-4 py-3">
+                <h2 class="h4 mb-0">Popovers</h2>
+            </div>
+
+            <!-- DESCRIPCIÓN -->
+            <div class="p-4 bg-light border-bottom">
+                <h4 class="text-purple mb-3">¿Qué son los popovers?</h4>
+
+                <p>
+                    Los <strong>Popovers</strong> en Bootstrap son componentes que muestran
+                    información adicional al hacer clic en un elemento.
+                </p>
+
+                <p>
+                    Son similares a los tooltips, pero permiten incluir más contenido
+                    como títulos, texto e incluso HTML.
+                </p>
+            </div>
+
+            <!-- CONTENIDO -->
+            <div class="row g-4 p-4">
+
+                <!-- IZQUIERDA -->
+                <div class="col-md-6">
+                    <h5 class="fw-bold text-purple mb-3">Ejemplo práctico</h5>
+
+                    <p>Popover básico</p>
+
+                    <button type="button" class="btn btn-lg btn-success"
+                        data-bs-toggle="popover"
+                        title="Título del Popover"
+                        data-bs-content="Este es un popover de ejemplo">
+                        Click para ver
+                    </button>
+
+                    <br><br>
+
+                    <p>Popover en distintas posiciones</p>
+
+                    <button type="button" class="btn btn-secondary m-1"
+                        data-bs-toggle="popover"
+                        data-bs-placement="top"
+                        data-bs-content="Arriba">
+                        Arriba
+                    </button>
+
+                    <button type="button" class="btn btn-secondary m-1"
+                        data-bs-toggle="popover"
+                        data-bs-placement="right"
+                        data-bs-content="Derecha">
+                        Derecha
+                    </button>
+
+                    <button type="button" class="btn btn-secondary m-1"
+                        data-bs-toggle="popover"
+                        data-bs-placement="bottom"
+                        data-bs-content="Abajo">
+                        Abajo
+                    </button>
+
+                    <button type="button" class="btn btn-secondary m-1"
+                        data-bs-toggle="popover"
+                        data-bs-placement="left"
+                        data-bs-content="Izquierda">
+                        Izquierda
+                    </button>
+
+                </div>
+
+                <!-- DERECHA -->
+                <div class="col-md-6">
+                    <h5 class="fw-bold text-purple mb-3">Código</h5>
+
+                    <textarea rows="18" class="form-control font-monospace "
+                        style="background-color: #2d2d2d; color: #ffffff; border-radius: 10px;">                   
+&lt;button type="button" class="btn btn-success"
+ data-bs-toggle="popover"
+ title="Título del popever"
+ data-bs-content="Este es un popover de ejemplo"&gt;
+ Click para ver
+&lt;/button&gt;
+
+&lt;script&gt;
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+const popoverList = [...popoverTriggerList].map(el =&gt; new bootstrap.Popover(el))
+&lt;/script&gt;
+
+                    </textarea>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <section>
+        <div class="container my-5">
+            <div class="card shadow border-0 rounded-4 overflow-hidden">
+    
+                <!-- HEADER -->
+                <div class="bg-primary text-white px-4 py-3">
+                    <h2 class="h4 mb-0">Tooltips</h2>
+                </div>
+    
+                <!-- DESCRIPCIÓN -->
+                <div class="p-4 bg-light border-bottom">
+                    <h4 class="text-purple mb-3">¿Qué son los tooltips?</h4>
+    
+                    <p>
+                        Los <strong>Tooltips</strong> muestran información breve al pasar el cursor sobre un elemento.
+                    </p>
+    
+                    <p>
+                        Son útiles para dar contexto sin ocupar espacio en la interfaz.
+                    </p>
+                </div>
+    
+                <!-- CONTENIDO -->
+                <div class="row g-4 p-4">
+    
+                    <!-- IZQUIERDA -->
+                    <div class="col-md-6">
+                        <h5 class="fw-bold text-purple mb-3">Ejemplo práctico</h5>
+    
+                        <button class="btn btn-primary m-1" data-bs-toggle="tooltip" data-bs-placement="top"
+                            title="Tooltip arriba">
+                            Arriba
+                        </button>
+    
+                        <button class="btn btn-secondary m-1" data-bs-toggle="tooltip" data-bs-placement="right"
+                            title="Tooltip derecha">
+                            Derecha
+                        </button>
+    
+                        <button class="btn btn-success m-1" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                            title="Tooltip abajo">
+                            Abajo
+                        </button>
+    
+                        <button class="btn btn-danger m-1" data-bs-toggle="tooltip" data-bs-placement="left"
+                            title="Tooltip izquierda">
+                            Izquierda
+                        </button>
+                        <img src="" alt="">
+                    </div>
+    
+                    <!-- DERECHA -->
+                    <div class="col-md-6">
+                        <h5 class="fw-bold text-purple mb-3">Código</h5>
+    
+                        <textarea rows="15" class="form-control font-monospace"
+                            style="background:#2d2d2d; color:white; border-radius:10px;">
+    
+    &lt;div class="col-md-6"&gt;
+  &lt;h5 class="fw-bold text-purple mb-3"&gt;Ejemplo práctico&lt;/h5&gt;
+
+  &lt;button class="btn btn-primary m-1" data-bs-toggle="tooltip" data-bs-placement="top"
+    title="Tooltip arriba"&gt;
+    Arriba
+  &lt;/button&gt;
+
+  &lt;button class="btn btn-secondary m-1" data-bs-toggle="tooltip" data-bs-placement="right"
+    title="Tooltip derecha"&gt;
+    Derecha
+  &lt;/button&gt;
+
+  &lt;button class="btn btn-success m-1" data-bs-toggle="tooltip" data-bs-placement="bottom"
+    title="Tooltip abajo"&gt;
+    Abajo
+  &lt;/button&gt;
+
+  &lt;button class="btn btn-danger m-1" data-bs-toggle="tooltip" data-bs-placement="left"
+    title="Tooltip izquierda"&gt;
+    Izquierda
+  &lt;/button&gt;
+&lt;/div&gt;
+    
+                        </textarea>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container my-5">
+            <div class="card shadow border-0 rounded-4">
+    
+                <!-- HEADER -->
+                <div class="bg-primary text-white px-4 py-3">
+                    <h2 class="h4 mb-0">Dropdowns</h2>
+                </div>
+    
+                <!-- DESCRIPCIÓN -->
+                <div class="p-4 bg-light border-bottom">
+                    <h4 class="text-purple mb-3">¿Qué son los dropdowns?</h4>
+    
+                    <p>
+                        Un <strong>Dropdown</strong> (menú desplegable) es un elemento de interfaz gráfica que muestra una
+                        lista de opciones al hacer clic o pasar el cursor sobre un botón, optimizando el espacio al ocultar
+                        opciones hasta que son necesarias. Es fundamental en diseño web para menús de navegación,
+                        formularios y selección de datos.
+                    </p>
+    
+                    <p>
+                        Son muy usados en navegación y selección de acciones.
+                    </p>
+                </div>
+    
+                <!-- CONTENIDO -->
+                <div class="row g-4 p-4">
+                    <!-- IZQUIERDA -->
+                    <div class="col-md-6">
+                        <h5 class="fw-bold text-purple mb-3">Ejemplo práctico</h5>
+    
+                        <div class="dropdown">
+                            <button class="btn btn-info dropdown-toggle text-white" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-geo-alt-fill"></i> Explorar Destinos
+                            </button>
+    
+                            <ul class="dropdown-menu shadow">
+                                <li>
+                                    <h6 class="dropdown-header">Populares</h6>
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-sun"></i> Playa del Carmen, México</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-building"></i> Tokio, Japón</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="bi bi-snow"></i> Reikiavik, Islandia</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item text-primary" href="#">Ver todas las ofertas</a></li>
+                            </ul>
+                        </div>
+                        <br>
+                        <img src="https://cdn.prod.website-files.com/64e895a2f8733943c6d0ddef/65ad3561a6db761cadcceb86_Dropdown%20UI%20Element%20-%20uinkits.svg" class="img-fluid rounded shadow-sm" alt="">
+                    </div>
+    
+                    <!-- DERECHA -->
+                    <div class="col-md-6">
+                        <h5 class="fw-bold text-purple mb-3">Código</h5>
+    
+                        <textarea rows="12" class="form-control font-monospace"
+                            style="background:#2d2d2d; color:white; border-radius:10px;">
+    
+     &lt;div class="dropdown"&gt;
+      &lt;button class="btn btn-info dropdown-toggle text-white" type="button" data-bs-toggle="dropdown" aria-expanded="false"&gt;
+        &lt;i class="bi bi-geo-alt-fill"&gt;&lt;/i&gt; Explorar Destinos
+      &lt;/button&gt;
+    
+      &lt;ul class="dropdown-menu shadow"&gt;
+        &lt;li&gt;&lt;h6 class="dropdown-header"&gt;Populares&lt;/h6&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;&lt;i class="bi bi-sun"&gt;&lt;/i&gt; Playa del Carmen, México&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;&lt;i class="bi bi-building"&gt;&lt;/i&gt; Tokio, Japón&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item" href="#"&gt;&lt;i class="bi bi-snow"&gt;&lt;/i&gt; Reikiavik, Islandia&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;hr class="dropdown-divider"&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a class="dropdown-item text-primary" href="#"&gt;Ver todas las ofertas&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+                            </textarea>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+   <!-- Bootstrap JS (SOLO UNA VEZ) -->
+
+
+<!-- 1. Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- 2. TU CÓDIGO JS -->
+<script>
+  // Tooltips
+  const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+  const tooltipList = [...tooltipTriggerList].map(el => new bootstrap.Tooltip(el))
+
+  // Popovers
+  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+  const popoverList = [...popoverTriggerList].map(el => new bootstrap.Popover(el))
+</script>
+
 </body>
 </html>
