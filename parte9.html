@@ -1,106 +1,300 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disertación Bootstrap | Parte 9</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<html>
+  <head>
+    <title>Modales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h1 style="color: blue;">MODALES</h1>
+    <h2>Modal Emergente</h2>
+    <div>
+      <!--1er ejemplo-->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Mostrar Modal Emergente
+      </button>
 
-    <nav class="navbar navbar-expand-lg barra bg-opacity-90 sticky-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menuNavegacion">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="parte1.html">Parte 1</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte2.html">Parte 2</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte3.html">Parte 3</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte4.html">Parte 4</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte5.html">Parte 5</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte6.html">Parte 6</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte7.html">Parte 7</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte8.html">Parte 8</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte9.html">Parte 9</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte10.html">Parte 10</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte11.html">Parte 11</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                </ul>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: chartreuse;">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Heder del Modal</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body" style="background-color: chocolate;">
+              Cuerpo del Modal
+            </div>
+            <div class="modal-footer" style="background-color: aquamarine;">
+              Footer del Modal
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+    <br/>
 
-     <div class="container my-5">
-        <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
-            <div class="bg-purple text-white px-4 py-3">
-                <h2 class="h4 mb-0">Introducción a Bootstrap</h2>
+    <h2>Modal con fondo Bloqueado</h2>
+    <div>
+      <!--2do ejemplo-->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Mostrar Modal Fondo Bloquedo
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal Estatico</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            <div class="modal-body">
+              Mensaje del Modal Estatico: bloquea toda la pantalla se debe hacer click en Close o en la X
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <h2>Modal Scrollable</h2>
+    <!--3er ejemplo-->
+    <!-- Scrollable modal -->
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalScrollable">
+        Mostrar Modal Scrollable
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalScrollable" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal Scrollable</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Este es un contenido de marcador de posición para mostrar el comportamiento de desplazamiento de los modales. Utilizamos saltos de línea repetidos para demostrar cómo el contenido puede exceder la altura interna mínima, mostrando así el desplazamiento interno. Cuando el contenido se vuelve más largo que la altura máxima predefinida del modal, el contenido se recortará y se podrá desplazar dentro del modal.
+              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+              Este contenido debería aparecer en la parte inferior después de desplazarse.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <h2>Modal Centreado Verticalmente</h2>
+    <!--4to ejemplo-->
+    <!--Modal Centreado -->
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
+        Mostrar Modal Centreado
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal Emergente</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Este es un Modal Emergete centrado verticalmente
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+
+    <h2>Modal para Mostrar Herramientas</h2>
+    <!--5to ejemplo-->
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalPopoversLabel">
+        Mostrar Modal con Herramientas
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalPopoversLabel" tabindex="-1" aria-labelledby="exampleModalPopoversLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal con Herramientas</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                <h2 class="fs-5">Popover en un modal</h2>
+                <p>Este 
+                  <button class="btn btn-secondary" title="Es un Boton">
+                    Boton
+                  </button>
+                   es una herramienta en el modal
+                </p>
+                <hr>
+                <h2 class="fs-5">Mas herramientas dentro del modal</h2>
+                <p>
+                  <a href="#" data-bs-toggle="tooltip" title="Informacion">
+                    Este enlace
+                  </a> y 
+                  <a href="#" data-bs-toggle="tooltip" title="Informacion">
+                    ese enlace
+                  </a> tiene informacion de sus herramientas</p>
+              </div>
             
-            <div class="p-4 bg-light border-bottom">
-                <h2 class="h4 text-purple mb-0">Introducción a Bootstrap</h2>
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
-
-            <div class="row g-0">
-
-                <div class="col-md-6 p-4 border-end" id="ejemplos-container">
-                    <h5 class="fw-bold text-purple mb-3">Ejemplos prácticos</h5>
-                    <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <div class="text-center mt-3">
-                        <img id="captura-ejemplo" src="Capturas/Captura ejemplo.png" alt="Captura del código" class="img-fluid rounded border" style="border-color: #6f42c1 !important; max-width: 100%;">
-                        <p class="small text-muted mt-2"> </p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 p-4">
-                    <h5 class="fw-bold text-purple mb-3">Código</h5>
-                    <textarea id="codigo-editable" rows="12" class="form-control font-monospace"
-                    style="background-color: #2d2d2d; color: #d4d4d4; border: none; font-size: 0.8rem; resize: vertical;">
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-                    </textarea>
+    <br/>
 
-                    <div class="mt-3" style="overflow-x: auto; overflow-y: visible;">
-                        <img src="Capturas/Captura de pantalla.png" alt="Captura del código" class="rounded" style="height: auto; max-width: none; width: auto;">
-                    </div>
-                </div>
+    <h2>Modal para Alternar entre Modales</h2>
+    <!--6to ejemplo-->
+    <div>
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+        Mostrar Modal Alternados
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Muestra un segundo modal y oculta este con el botón de abajo.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Abrir Segundo Modal</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Oculte este modal y muestre el primero con el botón a continuación.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Volver al Primero</button>
             </div>
         </div>
+      </div>
+    </div>
+    <br/><br/>
+
+    <h1 style="color: blue">TOAST</h1>
+    <h2>Toast Simple</h2>
+    <div>
+      <button type="button" class="btn btn-primary" id="liveToastBtn">Mostrar Toast</button>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3" >
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+          <div class="toast-header">
+            <svg aria-hidden="true" class="bd-placeholder-img rounded me-2" height="20" preserveAspectRatio="xMidYMid slice" width="20" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small>Tiempo de Notificacion</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Este es el mensaje dentro del toast
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    
+    <h2>Toast Apilado</h2>
+    <!--Toast aplilados-->
+    <div>
+      <button type="button" class="btn btn-primary" id="ToastStackingBtn">Mostrar Toast Apilados</button>
+
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        
+        <div id="liveToast1" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+          <div class="toast-header">
+            <svg aria-hidden="true" class="bd-placeholder-img rounded me-2" height="20" preserveAspectRatio="xMidYMid slice" width="20" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-body-secondary">justo ahora</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Mostrando pirmer toast
+          </div>
+        </div>
+        
+        <div id="liveToast2" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+          <div class="toast-header">
+            <svg aria-hidden="true" class="bd-placeholder-img rounded me-2" height="20" preserveAspectRatio="xMidYMid slice" width="20" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#007aff"></rect></svg>
+            <strong class="me-auto">Bootstrap</strong>
+            <small class="text-body-secondary">2 seconds ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body">
+            Aqui se muestra el segundo toast
+          </div>
+        </div>
+      </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script>
+      const toastTrigger = document.getElementById('liveToastBtn')
+      const toastLiveExample = document.getElementById('liveToast')
+
+      if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+          toastBootstrap.show()
+        })
+      }
+
+      // 1. Buscamos el botón y los dos elementos Toast por sus IDs
+      const toastTrigger2 = document.getElementById('ToastStackingBtn')
+      const toastUno = document.getElementById('liveToast1')
+      const toastDos = document.getElementById('liveToast2')
+
+      // 2. Si el botón existe, añadimos el evento de clic
+      if (toastTrigger2) {
+        // Preparamos las instancias de Bootstrap para cada uno
+        const instanceUno = bootstrap.Toast.getOrCreateInstance(toastUno)
+        const instanceDos = bootstrap.Toast.getOrCreateInstance(toastDos)
+
+        toastTrigger2.addEventListener('click', () => {
+          // Al hacer clic, mostramos ambos
+          instanceUno.show()
+          instanceDos.show()
+        })
+      }
+    </script>
+    
+  </body>
 </html>
