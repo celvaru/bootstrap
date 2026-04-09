@@ -1,106 +1,847 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Disertación Bootstrap | Parte 5</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <nav class="navbar navbar-expand-lg barra bg-opacity-90 sticky-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menuNavegacion">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link text-white" href="parte1.html">Parte 1</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte2.html">Parte 2</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte3.html">Parte 3</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte4.html">Parte 4</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte5.html">Parte 5</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte6.html">Parte 6</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte7.html">Parte 7</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte8.html">Parte 8</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte9.html">Parte 9</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte10.html">Parte 10</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="parte11.html">Parte 11</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
-                </ul>
-            </div>
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-primary bg-opacity-90 sticky-top">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuNavegacion"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuNavegacion">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte1.html">Parte 1</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte2.html">Parte 2</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte3.html">Parte 3</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte4.html">Parte 4</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white fw-bold" href="parte5.html"
+                >Parte 5</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte6.html">Parte 6</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte7.html">Parte 7</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte8.html">Parte 8</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte9.html">Parte 9</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte10.html">Parte 10</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="parte11.html">Parte 11</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Inicio</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-     <div class="container my-5">
-        <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
-            <div class="bg-purple text-white px-4 py-3">
-                <h2 class="h4 mb-0">Introducción a Bootstrap</h2>
-            </div>
-            
-            <div class="p-4 bg-light border-bottom">
-                <h2 class="h4 text-purple mb-0">Introducción a Bootstrap</h2>
-                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-
-            <div class="row g-0">
-
-                <div class="col-md-6 p-4 border-end" id="ejemplos-container">
-                    <h5 class="fw-bold text-purple mb-3">Ejemplos prácticos</h5>
-                    <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                    <div class="text-center mt-3">
-                        <img id="captura-ejemplo" src="Capturas/Captura ejemplo.png" alt="Captura del código" class="img-fluid rounded border" style="border-color: #6f42c1 !important; max-width: 100%;">
-                        <p class="small text-muted mt-2"> </p>
-                    </div>
-                </div>
-                
-                <div class="col-md-6 p-4">
-                    <h5 class="fw-bold text-purple mb-3">Código</h5>
-                    <textarea id="codigo-editable" rows="12" class="form-control font-monospace"
-                    style="background-color: #2d2d2d; color: #d4d4d4; border: none; font-size: 0.8rem; resize: vertical;">
-<form>
-    <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-                    </textarea>
-
-                    <div class="mt-3" style="overflow-x: auto; overflow-y: visible;">
-                        <img src="Capturas/Captura de pantalla.png" alt="Captura del código" class="rounded" style="height: auto; max-width: none; width: auto;">
-                    </div>
-                </div>
-            </div>
+    <!-- ================================================
+         SECCIÓN 1 — BOTONES
+    ================================================ -->
+    <div class="container my-5">
+      <div class="card shadow-sm border-0 rounded-4 overflow-hidden">
+        <!-- Header -->
+        <div class="bg-primary text-white px-4 py-3">
+          <h2 class="h4 mb-0">Parte 5 — Botones, Imágenes e Iconos</h2>
         </div>
+
+        <!-- Introducción -->
+        <div class="p-4 bg-white border-bottom">
+          <h2 class="h4 text-primary mb-2">1. Botones</h2>
+          <p class="mb-0 text-secondary">
+            Bootstrap incluye un sistema completo de botones a través de la
+            clase base <code>.btn</code> combinada con modificadores de color
+            (<code>.btn-primary</code>, <code>.btn-danger</code>, etc.), tamaño
+            (<code>.btn-lg</code>, <code>.btn-sm</code>) y estado
+            (<code>disabled</code>, <code>.active</code>). También permite
+            agrupar botones con <code>.btn-group</code> y construir barras de
+            herramientas con <code>.btn-toolbar</code>.
+          </p>
+        </div>
+
+        <!-- 1a. Variantes sólidas -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Variantes sólidas</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-primary">Primary</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-success">Success</button>
+              <button class="btn btn-danger">Danger</button>
+              <button class="btn btn-warning">Warning</button>
+              <button class="btn btn-info">Info</button>
+              <button class="btn btn-light">Light</button>
+              <button class="btn btn-dark">Dark</button>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="10"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-secondary">Secondary</button>
+<button class="btn btn-success">Success</button>
+<button class="btn btn-danger">Danger</button>
+<button class="btn btn-warning">Warning</button>
+<button class="btn btn-info">Info</button>
+<button class="btn btn-light">Light</button>
+<button class="btn btn-dark">Dark</button>
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- 1b. Variantes outline -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Variantes outline</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-outline-primary">Primary</button>
+              <button class="btn btn-outline-secondary">Secondary</button>
+              <button class="btn btn-outline-success">Success</button>
+              <button class="btn btn-outline-danger">Danger</button>
+              <button class="btn btn-outline-warning">Warning</button>
+              <button class="btn btn-outline-info">Info</button>
+              <button class="btn btn-outline-dark">Dark</button>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="9"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<button class="btn btn-outline-primary">Primary</button>
+<button class="btn btn-outline-secondary">Secondary</button>
+<button class="btn btn-outline-success">Success</button>
+<button class="btn btn-outline-danger">Danger</button>
+<button class="btn btn-outline-warning">Warning</button>
+<button class="btn btn-outline-info">Info</button>
+<button class="btn btn-outline-dark">Dark</button>
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- 1c. Tamaños y estados -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Tamaños y estados</h5>
+            <div class="d-flex flex-wrap align-items-center gap-3 mb-3">
+              <button class="btn btn-primary btn-lg">Grande</button>
+              <button class="btn btn-primary">Normal</button>
+              <button class="btn btn-primary btn-sm">Pequeño</button>
+            </div>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-success active">Activo</button>
+              <button class="btn btn-secondary" disabled>Deshabilitado</button>
+              <a href="#" class="btn btn-warning">Enlace-botón</a>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="10"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Tamaños -->
+<button class="btn btn-primary btn-lg">Grande</button>
+<button class="btn btn-primary">Normal</button>
+<button class="btn btn-primary btn-sm">Pequeño</button>
+
+<!-- Estados -->
+<button class="btn btn-success active">Activo</button>
+<button class="btn btn-secondary" disabled>Deshabilitado</button>
+<a href="#" class="btn btn-warning">Enlace-botón</a>
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- 1d. Grupos y toolbar -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Grupos y Toolbar</h5>
+
+            <p class="small text-muted mb-1">.btn-group</p>
+            <div class="btn-group mb-3">
+              <button class="btn btn-outline-primary">Izquierda</button>
+              <button class="btn btn-outline-primary">Centro</button>
+              <button class="btn btn-outline-primary">Derecha</button>
+            </div>
+
+            <p class="small text-muted mb-1">.btn-group-vertical</p>
+            <div class="btn-group-vertical mb-3">
+              <button class="btn btn-outline-secondary">Opción 1</button>
+              <button class="btn btn-outline-secondary">Opción 2</button>
+              <button class="btn btn-outline-secondary">Opción 3</button>
+            </div>
+
+            <p class="small text-muted mb-1">.btn-toolbar</p>
+            <div class="btn-toolbar gap-2">
+              <div class="btn-group">
+                <button class="btn btn-secondary btn-sm">
+                  <i class="bi bi-type-bold"></i>
+                </button>
+                <button class="btn btn-secondary btn-sm">
+                  <i class="bi bi-type-italic"></i>
+                </button>
+                <button class="btn btn-secondary btn-sm">
+                  <i class="bi bi-type-underline"></i>
+                </button>
+              </div>
+              <div class="btn-group">
+                <button class="btn btn-secondary btn-sm">
+                  <i class="bi bi-text-left"></i>
+                </button>
+                <button class="btn btn-secondary btn-sm">
+                  <i class="bi bi-text-center"></i>
+                </button>
+                <button class="btn btn-secondary btn-sm">
+                  <i class="bi bi-text-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="22"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Grupo horizontal -->
+<div class="btn-group">
+  <button class="btn btn-outline-primary">Izquierda</button>
+  <button class="btn btn-outline-primary">Centro</button>
+  <button class="btn btn-outline-primary">Derecha</button>
+</div>
+
+<!-- Grupo vertical -->
+<div class="btn-group-vertical">
+  <button class="btn btn-outline-secondary">Opción 1</button>
+  <button class="btn btn-outline-secondary">Opción 2</button>
+  <button class="btn btn-outline-secondary">Opción 3</button>
+</div>
+
+<!-- Toolbar -->
+<div class="btn-toolbar gap-2"
+>
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm">B</button>
+    <button class="btn btn-secondary btn-sm">I</button>
+    <button class="btn btn-secondary btn-sm">U</button>
+  </div>
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm">L</button>
+    <button class="btn btn-secondary btn-sm">C</button>
+    <button class="btn btn-secondary btn-sm">R</button>
+  </div>
+</div>
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- ============================================
+                 SECCIÓN 2 — BOOTSTRAP ICONS
+            ============================================ -->
+        <div class="p-4 bg-white border-bottom border-top mt-2">
+          <h2 class="h4 text-primary mb-2">2. Bootstrap Icons</h2>
+          <p class="mb-0 text-secondary">
+            Bootstrap Icons es una biblioteca de más de 2 000 iconos SVG que se
+            integra mediante
+            <code>&lt;i class="bi bi-{nombre}"&gt;&lt;/i&gt;</code>. Se escalan
+            con las utilidades <code>.fs-*</code> y se colorean con
+            <code>.text-*</code>. Para usarlos se enlaza su CDN o se instala el
+            paquete npm.
+          </p>
+        </div>
+
+        <!-- 2a. Galería de iconos -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Galería por categorías</h5>
+
+            <p class="small text-muted mb-2">Comunicación</p>
+            <div class="d-flex flex-wrap gap-3 mb-3 text-center">
+              <div>
+                <i class="bi bi-envelope-fill fs-3 text-info d-block"></i
+                ><small>envelope</small>
+              </div>
+              <div>
+                <i class="bi bi-chat-dots-fill fs-3 text-info d-block"></i
+                ><small>chat-dots</small>
+              </div>
+              <div>
+                <i class="bi bi-bell-fill fs-3 text-info d-block"></i
+                ><small>bell</small>
+              </div>
+              <div>
+                <i class="bi bi-telephone-fill fs-3 text-info d-block"></i
+                ><small>telephone</small>
+              </div>
+              <div>
+                <i class="bi bi-send-fill fs-3 text-info d-block"></i
+                ><small>send</small>
+              </div>
+            </div>
+
+            <p class="small text-muted mb-2">Interfaz</p>
+            <div class="d-flex flex-wrap gap-3 mb-3 text-center">
+              <div>
+                <i class="bi bi-house-fill fs-3 text-success d-block"></i
+                ><small>house</small>
+              </div>
+              <div>
+                <i class="bi bi-gear-fill fs-3 text-success d-block"></i
+                ><small>gear</small>
+              </div>
+              <div>
+                <i class="bi bi-search fs-3 text-success d-block"></i
+                ><small>search</small>
+              </div>
+              <div>
+                <i class="bi bi-person-fill fs-3 text-success d-block"></i
+                ><small>person</small>
+              </div>
+              <div>
+                <i class="bi bi-star-fill fs-3 text-success d-block"></i
+                ><small>star</small>
+              </div>
+            </div>
+
+            <p class="small text-muted mb-2">Escalado con .fs-*</p>
+            <div class="d-flex align-items-end gap-3">
+              <div class="text-center">
+                <i class="bi bi-rocket-takeoff fs-1 text-danger d-block"></i
+                ><small>.fs-1</small>
+              </div>
+              <div class="text-center">
+                <i class="bi bi-rocket-takeoff fs-2 text-danger d-block"></i
+                ><small>.fs-2</small>
+              </div>
+              <div class="text-center">
+                <i class="bi bi-rocket-takeoff fs-3 text-danger d-block"></i
+                ><small>.fs-3</small>
+              </div>
+              <div class="text-center">
+                <i class="bi bi-rocket-takeoff fs-4 text-danger d-block"></i
+                ><small>.fs-4</small>
+              </div>
+              <div class="text-center">
+                <i class="bi bi-rocket-takeoff fs-5 text-danger d-block"></i
+                ><small>.fs-5</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="26"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Enlace CDN (en <head>) -->
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/
+bootstrap-icons@1.11.3/font/
+bootstrap-icons.min.css">
+
+<!-- Uso básico -->
+<i class="bi bi-envelope-fill"></i>
+<i class="bi bi-chat-dots-fill"></i>
+<i class="bi bi-bell-fill"></i>
+<i class="bi bi-telephone-fill"></i>
+<i class="bi bi-send-fill"></i>
+
+<!-- Con color -->
+<i class="bi bi-house-fill text-success"></i>
+<i class="bi bi-gear-fill text-success"></i>
+<i class="bi bi-search-fill text-success"></i>
+<i class="bi bi-person-fill text-success"></i>
+<i class="bi bi-star-fill text-success"></i>
+
+<!-- Con tamaño -->
+<i class="bi bi-rocket-takeoff fs-1 text-danger"></i>
+<i class="bi bi-rocket-takeoff fs-2 text-danger"></i>
+<i class="bi bi-rocket-takeoff fs-3 text-danger"></i>
+<i class="bi bi-rocket-takeoff fs-4 text-danger"></i>
+<i class="bi bi-rocket-takeoff fs-5 text-danger"></i>
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- 2b. Iconos en botones -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Iconos dentro de botones</h5>
+            <div class="d-flex flex-wrap gap-2">
+              <button class="btn btn-primary">
+                <i class="bi bi-plus-lg me-1"></i>Nuevo
+              </button>
+              <button class="btn btn-success">
+                <i class="bi bi-check2 me-1"></i>Guardar
+              </button>
+              <button class="btn btn-danger">
+                <i class="bi bi-trash3 me-1"></i>Eliminar
+              </button>
+              <button class="btn btn-warning">
+                <i class="bi bi-pencil-square me-1"></i>Editar
+              </button>
+              <button class="btn btn-secondary">
+                <i class="bi bi-filter me-1"></i>Filtrar
+              </button>
+            </div>
+            <div class="d-flex gap-2 mt-3">
+              <p class="small text-muted mb-1 me-1">Solo icono:</p>
+              <button
+                class="btn btn-outline-primary btn-sm"
+                title="Configuración"
+              >
+                <i class="bi bi-gear"></i>
+              </button>
+              <button class="btn btn-outline-secondary btn-sm" title="Buscar">
+                <i class="bi bi-search"></i>
+              </button>
+              <button class="btn btn-outline-danger btn-sm" title="Cerrar">
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="13"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Icono + texto -->
+<button class="btn btn-primary">
+  <i class="bi bi-plus-lg me-1"></i>Nuevo
+</button>
+<button class="btn btn-success">
+  <i class="bi bi-check2 me-1"></i>Guardar
+</button>
+<button class="btn btn-danger">
+  <i class="bi bi-trash3 me-1"></i>Eliminar
+</button>
+
+<!-- Solo icono -->
+<button class="btn btn-outline-primary btn-sm">
+  <i class="bi bi-gear"></i>
+</button>
+<button class="btn btn-outline-secondary btn-sm" title="Buscar">
+  <i class="bi bi-search"></i>
+</button>
+<button class="btn btn-outline-danger btn-sm" title="Cerrar">
+  <i class="bi bi-x-lg"></i>
+</button>
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- ============================================
+                 SECCIÓN 3 — IMÁGENES
+            ============================================ -->
+        <div class="p-4 bg-white border-bottom border-top mt-2">
+          <h2 class="h4 text-primary mb-2">3. Imágenes</h2>
+          <p class="mb-0 text-secondary">
+            Bootstrap provee tres utilidades principales para imágenes:
+            <code>.img-fluid</code> para hacer imágenes responsivas,
+            <code>.img-thumbnail</code> para añadir borde y padding, y el
+            elemento <code>&lt;figure&gt;</code> con sus clases
+            <code>.figure</code>, <code>.figure-img</code> y
+            <code>.figure-caption</code> para imágenes con leyenda semántica.
+          </p>
+        </div>
+
+        <!-- 3a. img-fluid -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">
+              .img-fluid — Imagen responsiva
+            </h5>
+            <img
+              src="https://picsum.photos/seed/bs5fluid/800/300"
+              class="img-fluid rounded"
+              alt="Ejemplo img-fluid"
+            />
+            <p class="small text-muted mt-2 mb-0">
+              La imagen nunca supera el ancho de su contenedor (<code
+                >max-width: 100%; height: auto</code
+              >).
+            </p>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="8"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Imagen responsiva -->
+<img src="imagen.jpg"
+     class="img-fluid rounded"
+     alt="Descripción">
+
+<!-- .img-fluid aplica:
+     max-width: 100%
+     height: auto  -->
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- 3b. img-thumbnail y formas -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">.img-thumbnail y formas</h5>
+            <div class="d-flex flex-wrap gap-4 align-items-end text-center">
+              <div>
+                <img
+                  src="https://picsum.photos/seed/th1/150/150"
+                  class="img-thumbnail"
+                  alt="thumbnail"
+                  style="width: 120px"
+                />
+                <p class="small text-muted mt-1 mb-0">.img-thumbnail</p>
+              </div>
+              <div>
+                <img
+                  src="https://picsum.photos/seed/th2/150/150"
+                  class="img-fluid rounded"
+                  alt="rounded"
+                  style="width: 120px"
+                />
+                <p class="small text-muted mt-1 mb-0">.rounded</p>
+              </div>
+              <div>
+                <img
+                  src="https://picsum.photos/seed/th3/150/150"
+                  class="img-fluid rounded-circle"
+                  alt="circle"
+                  style="width: 120px"
+                />
+                <p class="small text-muted mt-1 mb-0">.rounded-circle</p>
+              </div>
+              <div>
+                <img
+                  src="https://picsum.photos/seed/th4/150/150"
+                  class="img-thumbnail rounded-circle"
+                  alt="thumb circle"
+                  style="width: 120px"
+                />
+                <p class="small text-muted mt-1 mb-0">
+                  .img-thumbnail<br />.rounded-circle
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="14"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Thumbnail (borde + padding) -->
+<img src="imagen.jpg"
+     class="img-thumbnail"
+     alt="thumbnail">
+
+<!-- Esquinas redondeadas -->
+<img src="imagen.jpg"
+     class="img-fluid rounded"
+     alt="rounded">
+
+<!-- Circular -->
+<img src="imagen.jpg"
+     class="img-fluid rounded-circle"
+     alt="circle">
+
+<!-- Thumbnail circular -->
+<img src="imagen.jpg"
+     class="img-thumbnail rounded-circle"
+     alt="thumb circle">
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- 3c. Alineación -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Alineación de imágenes</h5>
+
+            <p class="small text-muted mb-1">.float-start</p>
+            <div class="clearfix mb-3">
+              <img
+                src="https://picsum.photos/seed/al1/100/70"
+                class="img-fluid rounded float-start me-3"
+                alt="float start"
+              />
+              <p class="small text-secondary">
+                La imagen flota a la izquierda y el texto fluye a su derecha
+                usando <code>.float-start</code>. Usar <code>.clearfix</code> en
+                el padre.
+              </p>
+            </div>
+
+            <p class="small text-muted mb-1">.float-end</p>
+            <div class="clearfix mb-3">
+              <img
+                src="https://picsum.photos/seed/al2/100/70"
+                class="img-fluid rounded float-end ms-3"
+                alt="float end"
+              />
+              <p class="small text-secondary">
+                La imagen flota a la derecha con <code>.float-end</code>. El
+                texto comienza desde la izquierda.
+              </p>
+            </div>
+
+            <p class="small text-muted mb-1">.mx-auto .d-block</p>
+            <img
+              src="https://picsum.photos/seed/al3/200/60"
+              class="img-fluid rounded mx-auto d-block"
+              alt="centrada"
+            />
+          </div>
+          <div class="col-md-6 p-4 border-bottom">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="18"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Flotar a la izquierda -->
+<div class="clearfix">
+  <img src="imagen.jpg"
+       class="img-fluid rounded float-start me-3"
+       alt="float start">
+  <p>Texto que fluye a la derecha...</p>
+</div>
+
+<!-- Flotar a la derecha -->
+<div class="clearfix">
+  <img src="imagen.jpg"
+       class="img-fluid rounded float-end ms-3"
+       alt="float end">
+  <p>Texto que fluye a la izquierda...</p>
+</div>
+
+<!-- Centrar -->
+<img src="imagen.jpg"
+     class="img-fluid rounded mx-auto d-block"
+     alt="centrada">
+                    </textarea
+            >
+          </div>
+        </div>
+
+        <!-- 3d. Figure -->
+        <div class="row g-0">
+          <div class="col-md-6 p-4 border-end">
+            <h5 class="fw-bold text-primary mb-3">
+              Figure — imagen con leyenda
+            </h5>
+            <div class="row g-3">
+              <div class="col-12">
+                <figure class="figure w-100">
+                  <img
+                    src="https://picsum.photos/seed/fig1/700/280"
+                    class="figure-img img-fluid rounded w-100"
+                    alt="Figura con caption izquierda"
+                  />
+                  <figcaption class="figure-caption">
+                    <i class="bi bi-camera me-1"></i>Caption por defecto —
+                    alineado a la izquierda.
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-12">
+                <figure class="figure w-100">
+                  <img
+                    src="https://picsum.photos/seed/fig2/700/280"
+                    class="figure-img img-fluid rounded w-100"
+                    alt="Figura con caption centrado"
+                  />
+                  <figcaption class="figure-caption text-center">
+                    <i class="bi bi-geo-alt me-1"></i>Caption centrado con
+                    <code>.text-center</code>.
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col-12">
+                <figure class="figure w-100">
+                  <img
+                    src="https://picsum.photos/seed/fig3/700/280"
+                    class="figure-img img-fluid rounded w-100"
+                    alt="Figura con caption derecha"
+                  />
+                  <figcaption class="figure-caption text-end">
+                    <i class="bi bi-image me-1"></i>Caption alineado a la
+                    derecha con <code>.text-end</code>.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 p-4">
+            <h5 class="fw-bold text-primary mb-3">Código</h5>
+            <textarea
+              rows="32"
+              class="form-control font-monospace"
+              style="
+                background-color: #2d2d2d;
+                color: #d4d4d4;
+                border: none;
+                font-size: 0.78rem;
+                resize: vertical;
+              "
+              readonly
+            >
+<!-- Figure básico (caption izquierda) -->
+<figure class="figure">
+  <img src="imagen.jpg"
+       class="figure-img img-fluid rounded"
+       alt="Descripción">
+  <figcaption class="figure-caption">
+    Texto de la leyenda.
+  </figcaption>
+</figure>
+
+<!-- Caption centrado -->
+<figure class="figure">
+  <img src="imagen.jpg"
+       class="figure-img img-fluid rounded"
+       alt="Descripción">
+  <figcaption class="figure-caption text-center">
+    Leyenda centrada.
+  </figcaption>
+</figure>
+
+<!-- Caption a la derecha -->
+<figure class="figure">
+  <img src="imagen.jpg"
+       class="figure-img img-fluid rounded"
+       alt="Descripción">
+  <figcaption class="figure-caption text-end">
+    Leyenda a la derecha.
+  </figcaption>
+</figure>
+                    </textarea
+            >
+          </div>
+        </div>
+      </div>
+      <!-- /card -->
     </div>
+    <!-- /container -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
